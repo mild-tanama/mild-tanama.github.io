@@ -164,7 +164,7 @@ img {
   .MainOther .MainOther__langList {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 12px; }
+    margin-left: -4px; }
     .MainOther .MainOther__langList li {
       padding-left: 4px; }
     .MainOther .MainOther__langList li:after {
