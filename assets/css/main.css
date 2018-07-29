@@ -1,0 +1,204 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+article, header, footer, aside, figure, figcaption, nav, section {
+  display: block; }
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+ol, ul {
+  list-style: none;
+  list-style-type: none; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','\30D2\30E9\30AE\30CE\89D2\30B4   ProN W3','\30E1\30A4\30EA\30AA', Meiryo,'\FF2D\FF33   \30B4\30B7\30C3\30AF',sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333; }
+
+h1, h2, h3, h4 {
+  font-family: 'Knewave','Century Gothic','Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','\30D2\30E9\30AE\30CE\89D2\30B4   ProN W3','\30E1\30A4\30EA\30AA', Meiryo,'\FF2D\FF33   \30B4\30B7\30C3\30AF',sans-serif;
+  line-height: 1.2; }
+
+a {
+  color: #333;
+  transition: .1s; }
+
+a:hover {
+  text-decoration: none;
+  color: #C8F57A; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom; }
+
+.PageMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 20px 10px;
+  box-sizing: border-box; }
+
+.MainTop {
+  text-align: center; }
+  .MainTop .MainTop__contents {
+    margin-top: 10px; }
+  .MainTop .MainTop__head {
+    text-align: center;
+    font-size: 24px; }
+  .MainTop .MainTop__summary {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px; }
+  .MainTop .MainTop__icon {
+    width: 80px;
+    height: 80px;
+    margin: auto; }
+  .MainTop .MainTop__listSns {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around; }
+
+.OtherWrap {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 400px;
+  display: flex; }
+
+.MainOther {
+  width: 100%; }
+  .MainOther + .MainOther {
+    margin-left: 10px; }
+  .MainOther .MainOther__button {
+    cursor: pointer;
+    position: relative;
+    text-align: center; }
+  .MainOther .MainOther__button._active .MainOther__title:after {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%); }
+  .MainOther .MainOther__title {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #C8F57A; }
+  .MainOther .MainOther__title:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    background-color: #F36993;
+    -webkit-clip-path: inset(0% 0% 90% 0%);
+            clip-path: inset(0% 0% 90% 0%);
+    transition: -webkit-clip-path .2s;
+    transition: clip-path .2s;
+    transition: clip-path .2s, -webkit-clip-path .2s; }
+  .MainOther .MainOther__button.-active .MainOther__title:after {
+    z-index: 100;
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%); }
+  .MainOther .MainOther__button.-active:before {
+    -webkit-animation: sampleClickBefore 1s ease forwards;
+            animation: sampleClickBefore 1s ease forwards; }
+  .MainOther .MainOther__contents {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: #F36993;
+    transition: .2s;
+    margin-bottom: 20px; }
+  .MainOther .MainOther__button.-active + .MainOther__contents {
+    visibility: visible;
+    opacity: 1; }
+  .MainOther .MainOther__subhead {
+    font-size: 14px; }
+  .MainOther .MainOther__jaHead {
+    font-size: 12px;
+    font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','\30D2\30E9\30AE\30CE\89D2\30B4   ProN W3','\30E1\30A4\30EA\30AA', Meiryo,'\FF2D\FF33   \30B4\30B7\30C3\30AF',sans-serif;
+    opacity: .7;
+    margin-left: 4px; }
+  .MainOther .MainOther__block {
+    font-size: 12px; }
+  .MainOther .MainOther__block + .MainOther__subhead {
+    margin-top: 20px; }
+  .MainOther .MainOther__subhead + .MainOther__block {
+    margin-top: 5px; }
+  .MainOther .MainOther__langList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 12px; }
+    .MainOther .MainOther__langList li {
+      padding-left: 4px; }
+    .MainOther .MainOther__langList li:after {
+      content: ", "; }
+    .MainOther .MainOther__langList li:last-child:after {
+      content: none; }
+  .MainOther .MainOther__likeList li {
+    padding-left: 12px;
+    line-height: 1.7;
+    position: relative; }
+  .MainOther .MainOther__likeList li:before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    border-radius: 100%;
+    background-color: #333;
+    top: 8px;
+    left: 2px; }
+  .MainOther .MainOther__likeList li + li {
+    margin-top: 8px; }
+
+@-webkit-keyframes sampleHover {
+  0% {
+    -webkit-clip-path: inset(0% 0% 90% 0%);
+            clip-path: inset(0% 0% 90% 0%); }
+  100% {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%); } }
+
+@keyframes sampleHover {
+  0% {
+    -webkit-clip-path: inset(0% 0% 90% 0%);
+            clip-path: inset(0% 0% 90% 0%); }
+  100% {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%); } }
